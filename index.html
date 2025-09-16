@@ -1,15 +1,163 @@
 <!doctype html>
-
 <html lang="zh-Hant">
-<p>
-  hello world
-</p>  
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>林盧君甫｜個人簡介</title>
+  <meta name="description" content="林盧君甫 — 元智大學 資工系 三年級" />
+  <style>
+    /* 簡潔現代的單頁樣式，歡迎修改文字與色彩 */
+    :root{
+      --accent:#0b84ff;
+      --bg:#f7fbff;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    body{font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans TC', 'Microsoft JhengHei', Arial; margin:0; background:linear-gradient(180deg,var(--bg),#ffffff); color:#111}
+    .container{max-width:980px;margin:36px auto;padding:20px}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:16px;flex:0 0 120px;background:linear-gradient(135deg,var(--accent),#6ee7b7);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:22px}
+    h1{margin:0;font-size:28px}
+    .subtitle{color:var(--muted);margin-top:6px}
+    nav{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{background:var(--card);border:1px solid #e6eef9;padding:8px 12px;border-radius:10px;cursor:pointer}
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:18px;margin-top:20px}
+    .card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+    .skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .chip{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;border:1px solid rgba(11,132,255,0.06)}
+    .projects{display:flex;flex-direction:column;gap:12px}
+    .project{padding:12px;border-radius:10px;border:1px solid #eef6ff}
+    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+    @media(max-width:880px){.grid{grid-template-columns:1fr;}.avatar{width:96px;height:96px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">林盧<br>君甫</div>
+      <div>
+        <h1>林盧君甫</h1>
+        <div class="subtitle">元智大學 資訊工程學系 | 大三</div>
+        <nav>
+          <button class="btn" onclick="downloadResume()">下載簡歷 (PDF)</button>
+          <button class="btn" onclick="emailMe()">聯絡我</button>
+          <a class="btn" href="#projects">我的專案</a>
+          <a class="btn" href="#courses">課程重點</a>
+        </nav>
+      </div>
+    </header>
 
+    <div class="grid">
+      <main>
+        <section class="card">
+          <h2>關於我</h2>
+          <p>大家好，我是林盧君甫，目前就讀元智大學資訊工程學系（大三）。我喜歡寫程式、做影像處理與機器學習相關實驗，也會接小型前後端專案與資料分析任務。</p>
+          <p>這份個人頁面為單檔 HTML，可直接下載或放到 GitHub Pages / Netlify 進行部署。內容都是可以自由修改的範例。</p>
+        </section>
 
+        <section id="projects" class="card" style="margin-top:14px">
+          <h2>重要專案</h2>
+          <div class="projects">
+            <div class="project">
+              <strong>1. 多人骨架追蹤整合 (期中作品)</strong>
+              <div class="subtitle">使用：OpenPose, YOLOv8, Python</div>
+              <p>結合 OpenPose 的 skeleton output 與 YOLOv8 的目標檢測，做多人語意互動的分析。解決方案含 ID 綁定、雜訊過濾與視覺化 console。</p>
+            </div>
+            <div class="project">
+              <strong>2. 影像分類模型訓練</strong>
+              <div class="subtitle">使用：PyTorch, ResNet, Data Augmentation</div>
+              <p>實作訓練流程、模型驗證套件，並撰寫訓練紀錄與混淆矩陣分析腳本。</p>
+            </div>
+            <div class="project">
+              <strong>3. 資料處理與 CSV 清理工具</strong>
+              <div class="subtitle">使用：Pandas, OpenCV</div>
+              <p>開發一套小工具自動清理重複 ID、依信心值保留偵測結果，能產生可視化報表。</p>
+            </div>
+          </div>
+        </section>
 
+        <section id="courses" class="card" style="margin-top:14px">
+          <h2>課程與技能</h2>
+          <div class="skills">
+            <div class="chip">資料結構</div>
+            <div class="chip">演算法</div>
+            <div class="chip">機器學習</div>
+            <div class="chip">深度學習</div>
+            <div class="chip">Python</div>
+            <div class="chip">C / C++</div>
+            <div class="chip">PyTorch</div>
+            <div class="chip">OpenCV</div>
+            <div class="chip">前端 (HTML/CSS/JS)</div>
+          </div>
 
+          <h3 style="margin-top:12px">課程重點</h3>
+          <ul>
+            <li>資料結構：鏈結串列、堆疊、佇列、樹、圖</li>
+            <li>演算法：Dijkstra, Bellman-Ford, 排序、搜尋</li>
+            <li>系統程式：組合語言與電腦結構（實作與 debug）</li>
+          </ul>
+        </section>
 
+      </main>
 
+      <aside>
+        <div class="card">
+          <h3>聯絡資訊</h3>
+          <p>學校：元智大學<br>系所：資訊工程學系（大三）</p>
+          <p>Email: <span id="email">junnfu.example@email.com</span></p>
+          <p>簡介：歡迎邀請我一起做專案或討論研究題目。</p>
+        </div>
 
-  
+        <div class="card" style="margin-top:12px">
+          <h3>快速技能檢視</h3>
+          <p style="margin:6px 0"><strong>程式語言</strong></p>
+          <div class="skills">
+            <div class="chip">Python</div>
+            <div class="chip">C/C++</div>
+            <div class="chip">JavaScript</div>
+          </div>
+
+          <p style="margin:10px 0 6px 0"><strong>工具</strong></p>
+          <div class="skills">
+            <div class="chip">Git</div>
+            <div class="chip">Linux</div>
+            <div class="chip">VS Code</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>想做/正在學</h3>
+          <ul>
+            <li>進階深度學習模型訓練與調參</li>
+            <li>視覺化 Web Dashboard</li>
+            <li>參與研究或實習機會</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <small>此頁面由 ChatGPT 範例產生 — 若要修改內容或風格，直接在 HTML 中編輯文字與樣式。</small>
+    </footer>
+  </div>
+
+  <script>
+    // 下載簡歷 (示範：產生簡單文字檔案，瀏覽器會以 .txt 下載；可改成 PDF 或連結到真正的檔案)
+    function downloadResume(){
+      const text = `姓名：林盧君甫\n學校：元智大學 資工系（大三）\n技能：Python, C/C++, PyTorch, OpenCV\n專案：多人骨架追蹤、多分類模型、資料清理工具\n聯絡：junnfu.example@email.com`;
+      const blob = new Blob([text], {type: 'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'Resume_LinLu_JunFu.txt';
+      document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+    }
+    function emailMe(){
+      const email = document.getElementById('email').innerText || 'junnfu.example@email.com';
+      window.location.href = `mailto:${email}?subject=你好，想與你合作`;
+    }
+  </script>
+</body>
 </html>
