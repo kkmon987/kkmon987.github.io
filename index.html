@@ -1,21 +1,239 @@
+```html
 <!doctype html>
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>林盧君甫｜個人簡介</title>
+
   <style>
-    body{font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; margin:40px; background:#f9fafb; color:#111}
-    .card{max-width:600px;margin:auto;background:#fff;padding:24px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.08)}
-    h1{margin-top:0;font-size:28px;color:#0b84ff}
-    p{line-height:1.6}
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #e0f2fe, #f8fafc, #dbeafe);
+      color: #1f2937;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 0;
+    }
+
+    .profile-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-bottom: 32px;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0ea5e9, #2563eb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 42px;
+      font-weight: bold;
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+      flex-shrink: 0;
+    }
+
+    .title h1 {
+      margin: 0;
+      font-size: 36px;
+      color: #0f172a;
+    }
+
+    .title p {
+      margin: 8px 0 0;
+      color: #2563eb;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .section {
+      margin-top: 28px;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      color: #0f172a;
+      margin-bottom: 12px;
+      border-left: 5px solid #2563eb;
+      padding-left: 12px;
+    }
+
+    .section p {
+      line-height: 1.8;
+      font-size: 16px;
+      color: #374151;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      background: #eff6ff;
+      color: #1d4ed8;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid #bfdbfe;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .info-box {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 18px;
+      text-align: center;
+      border: 1px solid #e5e7eb;
+    }
+
+    .info-box strong {
+      display: block;
+      color: #2563eb;
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .info-box span {
+      font-size: 14px;
+      color: #64748b;
+    }
+
+    .footer {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .profile-card {
+        padding: 28px;
+      }
+
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .title h1 {
+        font-size: 30px;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <div class="card">
-    <h1>林盧君甫</h1>
-    <p>大家好，我的名字是 <strong>林盧君甫</strong>，目前就讀於 <strong>元智大學 資訊工程學系</strong>，大學三年級。</p>
-    <p>我喜歡學習程式設計與電腦科學，持續累積自己的技能，並期待未來能參與更多專案與研究。</p>
-  </div>
+  <main class="container">
+    <div class="profile-card">
+      <div class="header">
+        <div class="avatar">林</div>
+
+        <div class="title">
+          <h1>林盧君甫</h1>
+          <p>元智大學 資訊工程學系｜大學三年級</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>關於我</h2>
+        <p>
+          大家好，我的名字是 <strong>林盧君甫</strong>，
+          目前就讀於 <strong>元智大學資訊工程學系</strong>，大學三年級。
+          我對程式設計、電腦科學與軟體開發有興趣，正在持續累積自己的技術能力。
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>學習方向</h2>
+        <p>
+          我希望透過課程與專案練習，增強自己在程式設計、資料處理、
+          GitHub 版本控制與專案開發方面的能力。未來也期待能參與更多實作專案與研究。
+        </p>
+
+        <div class="tags">
+          <span class="tag">C++</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">CSV Data</span>
+          <span class="tag">Software Development</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>個人特色</h2>
+
+        <div class="info-grid">
+          <div class="info-box">
+            <strong>CS</strong>
+            <span>資訊工程</span>
+          </div>
+
+          <div class="info-box">
+            <strong>3rd</strong>
+            <span>大學三年級</span>
+          </div>
+
+          <div class="info-box">
+            <strong>Project</strong>
+            <span>持續實作中</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>未來目標</h2>
+        <p>
+          未來我希望能更熟悉軟體開發流程，包含需求分析、程式設計、
+          測試、版本控制與文件撰寫，讓自己的專案更加完整且容易維護。
+        </p>
+      </div>
+
+      <div class="footer">
+        © 2026 林盧君甫｜Personal Website
+      </div>
+    </div>
+  </main>
 </body>
 </html>
+```
